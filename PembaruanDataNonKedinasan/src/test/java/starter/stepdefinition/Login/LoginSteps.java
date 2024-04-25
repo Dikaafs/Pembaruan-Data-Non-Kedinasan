@@ -26,11 +26,11 @@ public class LoginSteps extends PageObject {
 
     @When("user memasukan NIK")
     public void InputNIK(){
-        loginPage.EnterNIK("880019");
+        loginPage.EnterNIK("Tester");
     }
     @And("user memasukan password")
     public void InputPassword(){
-        loginPage.EnterPassword("NewLife1488");
+        loginPage.EnterPassword("Tester12");
     }
     @And("user click sign button")
     public void clickSignButton(){
