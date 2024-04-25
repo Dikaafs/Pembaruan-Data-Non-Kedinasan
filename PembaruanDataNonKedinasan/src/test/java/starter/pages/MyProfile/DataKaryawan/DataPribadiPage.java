@@ -122,12 +122,12 @@ public class DataPribadiPage extends PageObject {
     public void InputNoKTP(){
         $(FieldNoKTP()).clear();
         WebElement noktpvalid = $(FieldNoKTP());
-        noktpvalid.sendKeys("327314540888000321");
+        noktpvalid.sendKeys("327310000000000001");
     }
     @Step
     public void InputNoKTPInvalid(){
         WebElement NumericField = $(FieldNoKTP());
-        NumericField.sendKeys("317202140901133e");
+        NumericField.sendKeys("3172021431113312e");
     }
     @Step
     public void InputNoKTPMoreThan16(String ktpMoreThan16){
