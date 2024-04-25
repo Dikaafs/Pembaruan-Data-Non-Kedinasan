@@ -1,12 +1,10 @@
 package starter.pages.MyProfile.DataKaryawan;
 
-import io.cucumber.java.bs.A;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.pages.PageObject;
-import org.codehaus.groovy.transform.sc.transformers.RangeExpressionTransformer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
 
 public class DataPribadiPage extends PageObject {
 
@@ -20,40 +18,46 @@ public class DataPribadiPage extends PageObject {
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[1]/div/div/div[3]/div[1]/button");
     }
     private By FieldNoKTP(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[4]/div/div/input");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[1]/div/div/input");
     }
     private By WarningMessageKTP(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[1]/div/small");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[2]/div/div/div/div[1]/div/small");
+    }
+    private By btnUploadKTP(){
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div/div/span");
     }
     private By uploadKTP(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div/div/span");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[2]/div/div/div/input");
     }
     private By NamaLengkap(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[4]/div/div/input");
     }
     private By FieldJenisKelamin(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[7]/div/div/div/div/div[1]/div[2]");
-    }
-    private By JenisKelamin1(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[7]/div/div/div/div/div[1]/div[1]");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[7]/div/div/div/div/div[1]/div[2]/input");
     }
     private By FieldTanggalLahir(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[5]/div/div/input");
     }
+    private By ClickBulanLahir(){
+        return By.xpath("/html/body/div[2]/div[1]/div/div/select");
+    }
     private By BulanLahir(){
-        return By.xpath("/html/body/div[4]/div[1]/div/div/select/option[3]");
+        return By.xpath("/html/body/div[2]/div[1]/div/div/select/option[4]");
+    }
+    private By ClickTahunLahir(){
+        return By.xpath("/html/body/div[2]/div[1]/div/div/div/input");
     }
     private By TahunLahir(){
-        return By.xpath("/html/body/div[4]/div[1]/div/div/div/input");
+        return By.xpath("/html/body/div[2]/div[1]/div/div/div/input");
     }
     private By TanggalLahir(){
-        return By.xpath("/html/body/div[4]/div[2]/div/div[2]/div/span[25]");
+        return By.xpath("/html/body/div[2]/div[2]/div/div[2]/div/span[15]");
     }
     private By FieldGolonganDarah(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[10]/div/div/div/div/div[2]/div/svg");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[10]/div/div/div/div/div[1]");
     }
     private By GolonganDarah(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[10]/div/div/div/div/div[1]/div[1]");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[10]/div/div/div/div/div[1]/div[2]/input");
     }
     private By NomorBPJS(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[14]/div/div/input");
@@ -62,7 +66,7 @@ public class DataPribadiPage extends PageObject {
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[9]/div/div/div/div/div[2]/div");
     }
     private By AgamaPilihan(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[9]/div/div/div/div/div[1]/div[1]");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[9]/div/div/div/div/div[1]/div[2]/input");
     }
     private By InputKotaLahir(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[6]/div/div/input");
@@ -74,30 +78,36 @@ public class DataPribadiPage extends PageObject {
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[12]/div/div/input");
     }
     private By UploadNPWP(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[13]/div/div/div/div/span");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[13]/div/div/div/input");
     }
     private By AkteLahir(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[3]/div/div/div/div/span");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[3]/div/div/div/input");
     }
     private By KartuBPJS(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[15]/div/div/div/div/span");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[15]/div/div/div/input");
     }
     private By PasFoto(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[11]/div/div/div/div/span");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[11]/div/div/div/input");
+    }
+    private By PopUpAllert(){
+        return By.xpath("/html/body/div[1]/div[2]/div/div/div[1]");
     }
     private By simpanDraft(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[3]/div/div/div/div[16]/button");
     }
+    private By Submit(){
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[1]/div/div/div[3]/div[1]/button");
+    }
     private By PembaruanBerhasil(){
-        return By.xpath("/html/body/div[1]/div[2]/div/div/div[1]/div[2]");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[1]/div/div/span[1]/div/span");
     }
     private By ProgressStatus(){
-        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[4]/div[2]/div/ul/li[1]/div/div[2]");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[4]/div[2]/div/ul/li[1]/div/div[1]/span");
     }
     @Step
     public void ClickDataKaryawan(){
         waitForCondition();
-        $(clickDataKaryawan()).click();
+        $(clickDataKaryawan()).isDisplayed();
     }
     @Step
     public void ClickPerbaruiData(){
@@ -109,18 +119,44 @@ public class DataPribadiPage extends PageObject {
         $(UbahData()).click();
     }
     @Step
-    public void InputNoKTP(String noktp){
-        $(FieldNoKTP()).type(noktp);
+    public void InputNoKTP(){
+        $(FieldNoKTP()).clear();
+        WebElement noktpvalid = $(FieldNoKTP());
+        noktpvalid.sendKeys("327314540888000321");
+    }
+    @Step
+    public void InputNoKTPInvalid(){
+        WebElement NumericField = $(FieldNoKTP());
+        NumericField.sendKeys("317202140901133e");
+    }
+    @Step
+    public void InputNoKTPMoreThan16(String ktpMoreThan16){
+        $(FieldNoKTP()).clear();
+        $(FieldNoKTP()).type(ktpMoreThan16);
     }
     @Step
     public boolean ValidateWarningMessageKTP(){
         return $(WarningMessageKTP()).isDisplayed();
     }
     @Step
-    public void UploadKTP(){
+    public void Uploadktp(){
         WebElement uploadElement = $(uploadKTP());
-        uploadElement.sendKeys("C:/Users/yudika/(UPLOAD DI PATH INI");
-        $(uploadKTP()).click();
+        uploadElement.sendKeys("C:/Users/yudika/BU WULAN KTP.pdf");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    @Step
+    public void Upload5mb(){
+        WebElement uploadElement = $(uploadKTP());
+        uploadElement.sendKeys("C:/Users/yudika/ForTest.png");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     @Step
     public void InputNamaLengkap(String nama){
@@ -131,16 +167,28 @@ public class DataPribadiPage extends PageObject {
         $(FieldJenisKelamin()).click();
     }
     @Step
-    public void jenisKelamin1(){
-        $(JenisKelamin1()).click();
+    public void jenisKelamin(String jk){
+        $(FieldJenisKelamin()).typeAndEnter(jk);
+    }
+    @Step
+    public void InvalidJenisKelamin(String jk){
+        $(FieldJenisKelamin()).type(jk);
     }
     @Step
     public void ClickFieldTglLahir(){
         $(FieldTanggalLahir()).click();
     }
     @Step
+    public void ClickBulan(){
+        $(ClickBulanLahir()).click();
+    }
+    @Step
     public void MemilihBulanLahir(){
         $(BulanLahir()).click();
+    }
+    @Step
+    public void ClickTahun(){
+        $(ClickTahunLahir()).click();
     }
     @Step
     public void MemilihTahunLahir(String tahun){
@@ -155,8 +203,8 @@ public class DataPribadiPage extends PageObject {
         $(FieldGolonganDarah()).click();
     }
     @Step
-    public void memilihGolonganDarah(){
-        $(GolonganDarah()).click();
+    public void memilihGolonganDarah(String GolDar){
+        $(GolonganDarah()).typeAndEnter(GolDar);
     }
     @Step
     public void InputNoBPJS(String bpjs){
@@ -165,16 +213,15 @@ public class DataPribadiPage extends PageObject {
     @Step
     public void UploadKartuBPJS(){
         WebElement uploadElement = $(KartuBPJS());
-        uploadElement.sendKeys("C:/Users/yudika/(UPLOAD DI PATH INI");
-        $(KartuBPJS()).click();
+        uploadElement.sendKeys("C:/Users/yudika/bpjs sampel.jpeg");
     }
     @Step
     public void ClickFieldAgama(){
         $(FieldAgama()).click();
     }
     @Step
-    public void ClickAgamaPilihan(){
-        $(AgamaPilihan()).click();
+    public void ClickAgamaPilihan(String Agama){
+        $(AgamaPilihan()).typeAndEnter(Agama);
     }
     @Step
     public void inputkotalahir(String kota){
@@ -187,38 +234,56 @@ public class DataPribadiPage extends PageObject {
     }
     @Step
     public void InputNoNPWP(String npwp){
+        $(NomorNPWP()).clear();
         $(NomorNPWP()).type(npwp);
     }
     @Step
     public void uploadNpwp(){
         WebElement uploadElement = $(UploadNPWP());
-        uploadElement.sendKeys("C:/Users/yudika/(UPLOAD DI PATH INI");
-        $(UploadNPWP()).click();
+        uploadElement.sendKeys("C:/Users/yudika/npwpcontoh.jpeg");
     }
     @Step
     public void uploadPasFoto(){
         WebElement uploadElement = $(PasFoto());
-        uploadElement.sendKeys("C:/Users/yudika/(UPLOAD DI PATH INI");
-        $(PasFoto()).click();
+        uploadElement.sendKeys("C:/Users/yudika/pasfoto sample.jpeg");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public void UploadAkteLahir(){
         WebElement uploadElement = $(AkteLahir());
-        uploadElement.sendKeys("C:/Users/yudika/(UPLOAD DI PATH INI");
-        $(AkteLahir()).click();
+        uploadElement.sendKeys("C:/Users/yudika/aktalahirbaru.jpg");
+    }
+    public void UploadAktaLahir5mb(){
+        WebElement uploadElement = $(AkteLahir());
+        uploadElement.sendKeys("C:/Users/yudika/ForTest.png");
+    }
+    public boolean AllertMaxSize(){
+       return $(PopUpAllert()).isDisplayed();
     }
     @Step
     public void clickSimpanSebagaiDraft(){
-        waitForCondition();
         $(simpanDraft()).click();
+        $(PembaruanBerhasil()).isDisplayed();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    @Step
+    public void clickSubmit(){
+        $(Submit()).click();
     }
     @Step
     public boolean ValidatePembaruanBerhasil(){
-        return $(PembaruanBerhasil()).waitUntilVisible().isDisplayed();
+        return $(PembaruanBerhasil()).isDisplayed();
     }
     @Step
     public boolean ValidateProsesPembaruan(){
-        waitForRenderedElementsToBePresent(ProgressStatus());
-        return $(ProgressStatus()).isDisplayed();
+       return $(ProgressStatus()).isDisplayed();
     }
     // Negative case
     @Step
@@ -226,12 +291,12 @@ public class DataPribadiPage extends PageObject {
         $(NomorBPJS()).type(bpjs);
     }
     @Step
-    public void menginputAgamaTidakTersedia(String Agama){
-        $(FieldAgama()).type(Agama);
+    public void menginputAgamaTidakTersedia(String AgamaInv){
+        $(AgamaPilihan()).type(AgamaInv);
     }
     @Step
-    public void GolonganDarahTidakTersedia(String Goldar){
-        $(GolonganDarah()).type(Goldar);
+    public void GolonganDarahLainnya(String OtherGD){
+        $(GolonganDarah()).type(OtherGD);
     }
     @Step
     public void JenisKelaminTidakTersedia(String JK){

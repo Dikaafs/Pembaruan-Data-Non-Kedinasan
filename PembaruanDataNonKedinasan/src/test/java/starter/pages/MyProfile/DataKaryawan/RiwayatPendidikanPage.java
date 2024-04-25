@@ -41,11 +41,26 @@ public class RiwayatPendidikanPage extends PageObject {
     private By FieldTglMulai(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[1]/div/div/div[2]/div[9]/div/input");
     }
-    private By TglMuLai(){
+    private By TahunMulai(){
         return By.xpath("/html/body/div[5]/div[1]/div/div/div/input");
     }
-    private By TglLulus(){
+    private By BulanMulai(){
+        return By.xpath("/html/body/div[2]/div[1]/div/div/select/option[7]");
+    }
+    private By TanggalMulai(){
+        return By.xpath("/html/body/div[2]/div[2]/div/div[2]/div/span[23]");
+    }
+    private By ThnLulus(){
         return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[1]/div/div/div[2]/div[10]/div/input");
+    }
+    private By clickFieldThnLulus(){
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[4]/div/section/div/div[2]/div[2]/div[1]/div/div/div[2]/div[10]/div/input");
+    }
+    private By BulanLulus(){
+        return By.xpath("/html/body/div[3]/div[1]/div/div/select/option[7]");
+    }
+    private By TanggalLulus(){
+        return By.xpath("/html/body/div[3]/div[2]/div/div[2]/div/span[16]");
     }
     public void clickriwayatpendidikan(){
         $(riwayatpendidikan()).click();
@@ -85,10 +100,25 @@ public class RiwayatPendidikanPage extends PageObject {
     public void ClickTglMulai(){
         $(FieldTglMulai()).click();
     }
-    public void InputTglMulai(String tglmulai){
-        $(TglMuLai()).type(tglmulai);
+    public void MemilihBulanMulai(){
+        $(BulanMulai()).click();
     }
-    public void InputTglLulus(String tgllulus){
-        $(TglLulus()).type(tgllulus);
+    public void MemilihTanggalMulai(){
+        $(TanggalMulai()).click();
+    }
+    public void InputTahunMulai(String thnmulai){
+        $(TahunMulai()).type(thnmulai);
+    }
+    public void InputThnLulus(String thnlulus){
+        $(ThnLulus()).type(thnlulus);
+    }
+    public void ClickFieldThnLulus(){
+        $(clickFieldThnLulus()).click();
+    }
+    public void MemilihBulanLulus(){
+        $(BulanLulus()).click();
+    }
+    public void MemilihTanggalLulus(){
+        $(TanggalLulus()).click();
     }
 }

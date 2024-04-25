@@ -8,8 +8,14 @@ public class NamaJurusan {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+    @And("user menginput nama jurusan")
+    public void InputNamaJurusanValid(){
+        riwayatPendidikanPage.InputNamaJurusan("Teknik Informatika");
+    }
+
+    //Negative Case
     @And("user menginput nama jurusan dengan angka")
-    public void inputNamaJurusan(){
+    public void inputNamaJurusanInvalid(){
         riwayatPendidikanPage.InputNamaJurusan("Kelautan2");
     }
 }

@@ -17,11 +17,11 @@ public class GolonganDarah {
     }
     @And("user memilih golongan darah yang tersedia")
     public void memilihGolonganDarah(){
-        dataPribadiPage.memilihGolonganDarah();
+        dataPribadiPage.memilihGolonganDarah("O");
     }
     //Negative Case1
     @And("user memilih golongan darah yang tidak tersedia secara manual")
     public void inputGolonganDarahManual(){
-        dataPribadiPage.GolonganDarahTidakTersedia("P");
+        dataPribadiPage.GolonganDarahLainnya("P");
     }
 }

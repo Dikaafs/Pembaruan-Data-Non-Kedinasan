@@ -10,11 +10,10 @@ public class Suku {
 
     @And("user menginput suku")
     public void inputSuku(){
-        dataPribadiPage.inputSuku("JAWA");
+        dataPribadiPage.inputSuku("SUNDA");
     }
 
     //Negative Case
-
     @And("user menginput suku menggunakan angka")
     public void inputSukuDenganAngka(){
         dataPribadiPage.inputSuku("JAWA21");

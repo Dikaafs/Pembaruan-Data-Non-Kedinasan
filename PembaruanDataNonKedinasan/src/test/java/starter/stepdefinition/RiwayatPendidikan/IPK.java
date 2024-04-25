@@ -9,6 +9,11 @@ public class IPK {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+    @And("user menginput IPK")
+    public void InputIPKvalid(){
+        riwayatPendidikanPage.inputIPK("3.5");
+    }
+    //Negative Case
     @And("user menginput IPK menggunakan huruf")
     public void inputIPK(){
         riwayatPendidikanPage.inputIPK("empat");

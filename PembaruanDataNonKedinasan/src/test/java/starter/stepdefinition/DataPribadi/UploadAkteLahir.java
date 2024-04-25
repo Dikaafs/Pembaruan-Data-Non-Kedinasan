@@ -11,17 +11,13 @@ public class UploadAkteLahir {
     DataPribadiPage dataPribadiPage;
 
     @And("user mengunggah akte lahir")
-    public void UploadAkteLahir(){
+    public void uploadAkteLahir(){
         dataPribadiPage.UploadAkteLahir();
     }
 
     //Negative Case
     @And("user mengunggah akte lahir dengan size lebih dari 5mb")
     public void AkteLahirMoreThanMax(){
-        dataPribadiPage.UploadAkteLahir();
-    }
-    @Then("pop up peringatan ditampilkan bahwa file tidak boleh melebihi max size")
-    public void PopUpShown(){
-
+        dataPribadiPage.UploadAktaLahir5mb();
     }
 }

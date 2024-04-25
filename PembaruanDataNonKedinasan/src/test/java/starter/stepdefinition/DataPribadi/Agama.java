@@ -16,7 +16,7 @@ public class Agama {
     }
     @And("user memilih agama")
     public void userMemilihAgama(){
-        dataPribadiPage.ClickAgamaPilihan();
+        dataPribadiPage.ClickAgamaPilihan("HINDU");
     }
 
     //Negative case

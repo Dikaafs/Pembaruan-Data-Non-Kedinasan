@@ -9,6 +9,11 @@ public class Gelar {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+    @And("user menginput Gelar")
+    public void InputGelarValid(){
+        riwayatPendidikanPage.menginputGelar("S.KOM");
+    }
+    //Negative Case
     @And("user menginput gelar")
     public void inputGelar(){
         riwayatPendidikanPage.menginputGelar("S.KOM2");

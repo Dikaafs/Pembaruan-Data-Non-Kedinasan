@@ -18,6 +18,6 @@ public class UploadNPWP {
     //Negative case
     @And("user mengunggah kartu NPWP dengan size melebihi batas maximal yang sudah ditentukan")
     public void NPWPmelebihi5mb(){
-        dataPribadiPage.uploadNpwp();
+        dataPribadiPage.Upload5mb();
     }
 }

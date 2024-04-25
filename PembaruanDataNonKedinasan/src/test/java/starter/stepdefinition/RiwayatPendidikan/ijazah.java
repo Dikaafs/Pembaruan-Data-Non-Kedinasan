@@ -9,6 +9,12 @@ public class ijazah {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+
+    @And("user menginput ijazah")
+    public void uploadIjazah(){
+        riwayatPendidikanPage.UploadIjazah();
+    }
+    //Negative Case
     @And("user mengunggah file ijazah melebihi size batas maximum")
     public void uploadIjazahMorethan5MB(){
         riwayatPendidikanPage.UploadIjazah();

@@ -11,12 +11,12 @@ public class BPJS {
 
     @And("user menginput nomor bpjs")
     public void InputNomorBPJS(){
-        dataPribadiPage.InputNoBPJS("124435531");
+        dataPribadiPage.InputNoBPJS("0001660592655");
     }
 
     //Negative case
     @And("user menginput nomor bpjs dengan huruf dan karakter spesial")
     public void InputNomorBPJSinvalid(){
-        dataPribadiPage.inputBPJShuruf("244912ssar");
+        dataPribadiPage.inputBPJShuruf("244912ssar;");
     }
 }

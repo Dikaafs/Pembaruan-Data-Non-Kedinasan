@@ -8,8 +8,15 @@ public class NamaJenjang {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+
+    @And("user menginput nama jenjang")
+    public void inputNamaJenjangValid(){
+        riwayatPendidikanPage.InputNamaJenjang("S1");
+    }
+
+    //Negative Case
     @And("user menginput nama jenjang pendidikan dengan karakter spesial")
-    public void inputNamaJenjang(){
+    public void inputNamaJenjangInvalid(){
         riwayatPendidikanPage.InputNamaJenjang("S1_");
     }
 }

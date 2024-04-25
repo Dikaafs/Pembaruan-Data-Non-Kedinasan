@@ -7,11 +7,12 @@ Feature: Golongan Darah
     When user memasukan NIK
     And user memasukan password
     And user click sign button
-    And user diarahkan ke dashboard page
+    Then user diarahkan ke dashboard page
     And user skip welcome pop up
     And user click My Profile
-    And user click data karyawan
+    And user diarahkan ke data karyawan
     And user click perbarui data
+    And user click ubah data
 
   @Golongandarah
   Scenario: sebagai user saya dapat memilih golongan darah yang tersedia

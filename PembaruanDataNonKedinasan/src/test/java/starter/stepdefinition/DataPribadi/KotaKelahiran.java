@@ -3,6 +3,7 @@ package starter.stepdefinition.DataPribadi;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Steps;
+import org.junit.jupiter.api.Assertions;
 import starter.pages.Dashboard.DashboardPage;
 import starter.pages.MyProfile.DataKaryawan.DataPribadiPage;
 
@@ -27,7 +28,7 @@ public class KotaKelahiran {
     public void userClickMyProfile(){
         dashboardPage.clickMyProfile();
     }
-    @And("user click data karyawan")
+    @And("user diarahkan ke data karyawan")
     public void userClickDataKaryawan(){
         dataPribadiPage.ClickDataKaryawan();
     }
@@ -49,19 +50,16 @@ public class KotaKelahiran {
     }
     @And("pembaruan kota kelahiran berhasil disimpan")
     public void pembaruanKotaBerhasil(){
-        dataPribadiPage.ValidatePembaruanBerhasil();
+        Assertions.assertTrue(dataPribadiPage.ValidatePembaruanBerhasil());
     }
     @Then("status progress berubah menjadi draft")
     public void statusProgressBerubahMenjadiDraft(){
-        dataPribadiPage.ValidateProsesPembaruan();
+        Assertions.assertTrue(dataPribadiPage.ValidateProsesPembaruan());
     }
 
     //Negative Case
     @And("user menginput kota kelahiran dengan angka")
     public void InputKotaLahirAngka(){
-        dataPribadiPage.inputkotalahir("Bandung2");
-    }
-    //@Then("pesan peringatan muncul bahwa kota kelahiran tidak dapat diisi menggunakan angka")
-    public void pesanPeringatanAngkaTidakDiizinkan(){
+        dataPribadiPage.inputkotalahir("Bandung3");
     }
 }

@@ -16,6 +16,6 @@ public class UploadBPJS {
     //Negative Case
     @And("user mengunggah kartu bpjs dengan size lebih dari batas maximal")
     public void KartuBpjsMelebihi5mb(){
-        dataPribadiPage.UploadKartuBPJS();
+        dataPribadiPage.Upload5mb();
     }
 }

@@ -11,8 +11,9 @@ Feature: NPWP
     And user diarahkan ke dashboard page
     And user skip welcome pop up
     And user click My Profile
-    And user click data karyawan
+    And user diarahkan ke data karyawan
     And user click perbarui data
+    And user click ubah data
 
   @npwp
   Scenario: sebagai user saya berhasil menginput nomor npwp

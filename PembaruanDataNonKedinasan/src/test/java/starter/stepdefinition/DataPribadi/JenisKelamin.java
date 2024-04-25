@@ -16,11 +16,11 @@ public class JenisKelamin {
 
     @And("user memilih jenis kelamin")
     public void memilihJenisKelamin(){
-        dataPribadiPage.jenisKelamin1();
+        dataPribadiPage.jenisKelamin("WANITA");
     }
     //Negative case
     @And("user memilih jenis kelamin yang tidak tersedia")
     public void memilihJenisKelaminTidakTersedia(){
-        dataPribadiPage.JenisKelaminTidakTersedia("Test");
+        dataPribadiPage.InvalidJenisKelamin("Test");
     }
 }

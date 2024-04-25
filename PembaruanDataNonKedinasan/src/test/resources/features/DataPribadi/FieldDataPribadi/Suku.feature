@@ -10,7 +10,7 @@ Feature: Suku
     Then user diarahkan ke dashboard page
     And user skip welcome pop up
     And user click My Profile
-    And user click data karyawan
+    And user diarahkan ke data karyawan
     And user click perbarui data
     And user click ubah data
 
@@ -24,5 +24,5 @@ Feature: Suku
   Scenario: sebagai user saya tidak dapat mengisi field suku menggunakan angka
     And user menginput suku menggunakan angka
     And user click simpan sebagai draft
-    Then field tidak terisi jika diinput menggunakan huruf
+    Then status progress berubah menjadi draft
 

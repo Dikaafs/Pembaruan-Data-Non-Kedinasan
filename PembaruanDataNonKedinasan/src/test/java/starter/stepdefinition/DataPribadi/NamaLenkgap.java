@@ -13,13 +13,13 @@ public class NamaLenkgap {
 
     @And("user menginput nama lengkap")
     public void inputNamaLengkap(){
-        dataPribadiPage.InputNamaLengkap("MAYANGSEKAR AGINTIARA");
+        dataPribadiPage.InputNamaLengkap("WULANDARI");
     }
 
     //Negative case 1
     @And("user menginput nama lengkap dengan angka")
     public void InputInvalidNamaLengkap(){
-        dataPribadiPage.InputNamaLengkap("MAYANGSEKAR AGINTIARA2");
+        dataPribadiPage.InputNamaLengkap("WULANDARI2");
     }
     @Then("pesan peringatan muncul bahwa nama lengkap tidak dapat diisi dengan angka")
     public void pesanPeringatanTanpaAngka(){
@@ -28,7 +28,7 @@ public class NamaLenkgap {
     //Negative Case 2
     @And("user menginput nama lengkap dengan simbol")
     public void inputNamaLengkapSimbol(){
-        dataPribadiPage.InputNamaLengkap("MAYANGSEKAR AGINTIARA;");
+        dataPribadiPage.InputNamaLengkap("WULNDARI;");
     }
     @Then("pesan peringatan muncul bahwa nama lengkap tidak dapat diisi dengan simbol")
     public void pesanPeringatanTanpaSimbol(){

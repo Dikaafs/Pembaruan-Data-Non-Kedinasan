@@ -8,8 +8,13 @@ public class Negara {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+    @And("user menginput Negara")
+    public void InputNegaraValid(){
+        riwayatPendidikanPage.InputNegara("Indonesia");
+    }
+    //Negative Case
     @And("user menginput negara dengan angka")
-    public void inputNegara(){
-        riwayatPendidikanPage.InputNegara("Indonesia1");
+    public void inputNegaraInvalid(){
+        riwayatPendidikanPage.InputNegara("Indonesia2");
     }
 }

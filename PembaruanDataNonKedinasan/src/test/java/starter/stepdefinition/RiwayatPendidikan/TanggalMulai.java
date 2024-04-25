@@ -13,9 +13,30 @@ public class TanggalMulai {
     public void clickTglMulai(){
         riwayatPendidikanPage.ClickTglMulai();
     }
-    @And("user memilih tanggal masa depan")
-    public void memilihTglMasaDepan(){
-        riwayatPendidikanPage.InputTglMulai("2040");
+    @And("user memilih tahun mulai")
+    public void inputTahunMulai(){
+        riwayatPendidikanPage.InputTahunMulai("2011");
+    }
+    @And("user memilih tanggal mulai")
+    public void MemilihTanggalmulai(){
+        riwayatPendidikanPage.MemilihTanggalMulai();
+    }
+    @And("user memilih bulan mulai")
+    public void MemilihBulanMulai(){
+        riwayatPendidikanPage.MemilihBulanMulai();
+    }
+    //Negative Case
+    @And("user memilih tanggal mulai dimasa depan")
+    public void memilihTanggalMulaiMasaDepan(){
+        riwayatPendidikanPage.MemilihTanggalMulai();
+    }
+    @And("user memilih bulan mulai dimasa depan")
+    public void MemilihBulanMasaDepan(){
+        riwayatPendidikanPage.MemilihBulanMulai();
+    }
+    @And("user memilih tahun mulai dimasa depan")
+    public void inputTahunMasaDepan(){
+        riwayatPendidikanPage.InputTahunMulai("2040");
     }
     @Then("pesan peringatan muncul bahwa tanggal mulai pendidikan tidak bisa menggunakan format masa depan")
     public void tidakbisaTglMasaDepan(){

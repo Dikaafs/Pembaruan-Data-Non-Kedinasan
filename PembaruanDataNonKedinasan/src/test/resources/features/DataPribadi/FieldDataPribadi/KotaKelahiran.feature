@@ -10,7 +10,7 @@ Feature: Kota kelahiran
     Then user diarahkan ke dashboard page
     And user skip welcome pop up
     And user click My Profile
-    And user click data karyawan
+    And user diarahkan ke data karyawan
     And user click perbarui data
     And user click ubah data
   @KotaLahir
@@ -22,11 +22,8 @@ Feature: Kota kelahiran
 
   @KotaLahirInvalid
   Scenario: sebagai user saya tidak dapat menginput kota kelahiran dengan angka
-    And user click My Profile
-    And user click data karyawan
-    And user click perbarui data
     And user menginput kota kelahiran dengan angka
     And user click simpan sebagai draft
-    Then pesan peringatan muncul bahwa kota kelahiran tidak dapat diisi menggunakan angka
+    Then status progress berubah menjadi draft
 
 

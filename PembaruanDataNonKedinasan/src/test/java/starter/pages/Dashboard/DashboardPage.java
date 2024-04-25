@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 
 public class DashboardPage extends PageObject {
     private By Dashboard(){
-        return By.xpath("/html/body/div[4]/div/div[1]/div/div/div[2]/div/div[3]/div");
+        return By.xpath("/html/body/div[1]/div[1]/div[2]/div[1]/div/div/div/h5");
     }
     private By WelcomePopUP(){
-        return By.xpath("/html/body/div[4]/div/div[1]/div/div/div[2]/div/div[3]/small");
+        return By.xpath("/html/body/div[2]/div/div[1]/div/div/div[2]/div/div[3]/small/small");
     }
     private By Myprofile(){
         return By.xpath("/html/body/div[1]/div[1]/div[1]/div[3]/ul/li[2]/a/span");

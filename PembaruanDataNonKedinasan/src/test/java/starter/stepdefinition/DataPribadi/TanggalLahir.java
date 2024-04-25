@@ -15,9 +15,17 @@ public class TanggalLahir {
     public void clickFieldTanggalLahir(){
         dataPribadiPage.ClickFieldTglLahir();
     }
+    @And("user click bulan lahir")
+    public void clickBulanLahir(){
+        dataPribadiPage.ClickBulan();
+    }
     @And("user memilih bulan lahir")
     public void memilihBulanLahir(){
         dataPribadiPage.MemilihBulanLahir();
+    }
+    @And("user click tahun lahir")
+    public void clickTahun(){
+        dataPribadiPage.ClickTahun();
     }
     @And("user memilih tahun lahir")
     public void memilihTahunLahir(){
@@ -33,8 +41,9 @@ public class TanggalLahir {
     public void memilihTahunLahirMasaDepan(){
         dataPribadiPage.MemilihTahunLahir("2030");
     }
-    @Then("pesan peringatan muncul bahwa tanggal lahir tidak dapat menggunakan tanggal dimasa depan")
-    public void pesanPeringatanTanggalLahir(){
-
+    //Negative case 2
+    @And("user memilih tahun lahir dibawah 18th")
+    public void TahunLahirUnder18th(){
+        dataPribadiPage.MemilihTahunLahir("2008");
     }
 }

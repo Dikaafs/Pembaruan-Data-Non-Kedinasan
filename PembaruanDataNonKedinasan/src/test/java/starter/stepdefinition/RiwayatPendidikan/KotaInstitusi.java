@@ -9,6 +9,11 @@ public class KotaInstitusi {
     @Steps
     RiwayatPendidikanPage riwayatPendidikanPage;
 
+    @And("user menginput kota institusi")
+    public void InputKotaInstitusi(){
+        riwayatPendidikanPage.inputKotaInstitusi("Bandung");
+    }
+    //Negative Case
     @And("user menginput kota institusi dengan angka")
     public void inputKotaInstitusi(){
         riwayatPendidikanPage.inputKotaInstitusi("Bandung0");

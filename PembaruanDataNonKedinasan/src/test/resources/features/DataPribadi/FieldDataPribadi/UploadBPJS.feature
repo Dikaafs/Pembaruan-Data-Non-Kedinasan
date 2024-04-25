@@ -10,8 +10,9 @@ Feature: Upload BPJS
     And user diarahkan ke dashboard page
     And user skip welcome pop up
     And user click My Profile
-    And user click data karyawan
+    And user diarahkan ke data karyawan
     And user click perbarui data
+    And user click ubah data
 
   @uploadbpjs
   Scenario: sebagai user saya berhasil mengunggah kartu bpjs

@@ -18,6 +18,6 @@ public class UploadPasFoto {
     //Negative case
     @And("user mengunggah pas foto melebihi batas maximal yang ditentukan")
     public void PasFotoMelebihi5MB(){
-        dataPribadiPage.uploadPasFoto();
+        dataPribadiPage.Upload5mb();
     }
 }
